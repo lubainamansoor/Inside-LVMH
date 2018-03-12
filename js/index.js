@@ -34,14 +34,14 @@ $(function() {
 // NAVIGATION STICKY
 
 var yourNavigation = $(".nav");
-    stickyDiv = "sticky";
+    sticky = "sticky";
     yourHeader = $('.header').height();
 
 $(window).scroll(function() {
   if( $(this).scrollTop() > yourHeader ) {
-    yourNavigation.addClass(stickyDiv);
+    yourNavigation.addClass(sticky);
   } else {
-    yourNavigation.removeClass(stickyDiv);
+    yourNavigation.removeClass(sticky);
   }
 });
 
