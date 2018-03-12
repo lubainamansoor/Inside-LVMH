@@ -33,14 +33,15 @@ $(function() {
 ////////////////////////////////////
 // NAVIGATION STICKY
 
-var viewHeight = $(window).height();
-var navigation = $(nav);
+var yourNavigation = $(".nav");
+    stickyDiv = "sticky";
+    yourHeader = $('.header').height();
 
-$(window).scroll( function() {
-  if ( $(window).scrollTop() > (viewHeight - 175) ) { //edit for nav height
-    navigation.addClass(sticky);
+$(window).scroll(function() {
+  if( $(this).scrollTop() > yourHeader ) {
+    yourNavigation.addClass(stickyDiv);
   } else {
-    navigation.removeClass(sticky);
+    yourNavigation.removeClass(stickyDiv);
   }
 });
 
