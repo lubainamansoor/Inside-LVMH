@@ -33,17 +33,17 @@ $(function() {
 ////////////////////////////////////
 // NAVIGATION STICKY
 
-var yourNavigation = $(".nav");
-    sticky = "sticky";
-    yourHeader = $('.header').height();
+var viewHeight = $(window).height();
+var navigation = $('nav');
 
-$(window).scroll(function() {
-  if( $(this).scrollTop() > yourHeader ) {
-    yourNavigation.addClass(sticky);
+$(window).scroll( function() {
+  if ( $(window).scrollTop() > (viewHeight - 175) ) { //edit for nav height
+    navigation.addClass('sticky');
   } else {
-    yourNavigation.removeClass(sticky);
+    navigation.removeClass('sticky');
   }
 });
+
 
 ////////////////////////////////////////////////
 // MAKE THE SPLASH CONTAINER VERTICALLY CENTERED
